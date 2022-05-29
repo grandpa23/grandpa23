@@ -11,7 +11,7 @@ import { Card } from './cards/entities/card.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: 'postgres://lhvsknzj:Xsfvgb6qYEZlnmvyRs9o7bR-RxvSsHSk@tyke.db.elephantsql.com/lhvsknzj',
+      url: 'postgres://anqvznmv:eHe12msiNaTVNj0yzgaeCkKDCSBrNUKh@raja.db.elephantsql.com/anqvznmv',
       synchronize: true,
       logging: 'all',
       entities: [Column, Card],
