@@ -5,7 +5,9 @@ import { Card } from './entities/card.entity';
 
 @Injectable()
 export class CardsService extends TypeOrmCrudService<Card> {
-  constructor(public readonly repo: CardsRepository) {
-    super(repo);
+  constructor(
+    private readonly cardsRepository: CardsRepository,
+  ) {
+    super(cardsRepository);
   }
 }

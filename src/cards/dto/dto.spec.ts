@@ -1,15 +1,16 @@
 import { plainToInstance } from 'class-transformer';
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from 'crypto';
 import { CreateCardDto } from './create-card.dto';
 import { UpdateCardDto } from './update-card.dto';
 import { DECORATORS } from '@nestjs/swagger/dist/constants';
+import { v4 } from 'uuid';
 
 describe('Cards DTO', () => {
   describe('Create Card DTO', () => {
     it('Поля помечены как @ApiProperty', async () => {
       const obj = new CreateCardDto();
       obj.name = 'test';
-      obj.columnId = uuidv4();
+      obj.columnId = v4();
 
       const dtoObject = plainToInstance(CreateCardDto, obj);
 
@@ -30,7 +31,7 @@ describe('Cards DTO', () => {
     it('Поля помечены как @ApiProperty', async () => {
       const obj = new UpdateCardDto();
       obj.name = 'test';
-      obj.columnId = uuidv4();
+      obj.columnId = v4();
 
       const dtoObject = plainToInstance(CreateCardDto, obj);
 

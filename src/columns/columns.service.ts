@@ -5,7 +5,9 @@ import { Column } from './entities/column.entity';
 
 @Injectable()
 export class ColumnsService extends TypeOrmCrudService<Column> {
-  constructor(public readonly repo: ColumnsRepository) {
-    super(repo);
+  constructor(
+    private readonly columnsRepository: ColumnsRepository,
+  ) {
+    super(columnsRepository);
   }
 }
