@@ -19,7 +19,7 @@ export class UsersService {
   }
 
   async getOneUser(id: User['id']): Promise<User> {
-    return await this.usersRepository.findOneOrFail(id);
+    return await this.usersRepository.findOneOrFail({where: {id: id}});
   }
 
   //   async updateOnePost(id: Post['id'], dto: UpdatePostDto): Promise<Post> {
