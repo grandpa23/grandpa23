@@ -15,7 +15,7 @@ import { AuthModule } from './auth/auth.module';
       type: 'postgres',
       url: DB_URL,
       entities: [User, Post],
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     PostsModule,
