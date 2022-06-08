@@ -3,11 +3,6 @@ import { IsString, IsNotEmpty, IsEmail, Length } from 'class-validator';
 import { User } from '../../users/entities/user.entity';
 
 export class SignUpDto {
-  @ApiProperty({ description: 'Логин пользователя', nullable: false })
-  @IsString()
-  @Length(1, 30)
-  username: string;
-
   @ApiProperty({ description: 'Mail пользователя', nullable: false })
   @ApiProperty()
   @IsEmail()
