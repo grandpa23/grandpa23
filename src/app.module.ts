@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Note } from './notes/entities/note.entity';
+import { Post } from './posts/entities/post.entity';
 import { User } from './users/entities/user.entity';
 import { DB_URL } from './config';
 import { UsersModule } from './users/users.module';
-import { NotesModule } from './notes/notes.module';
+import { PostsModule } from './posts/posts.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -14,11 +14,11 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: DB_URL,
-      entities: [User, Note],
+      entities: [User, Post],
       synchronize: true,
     }),
     UsersModule,
-    NotesModule,
+    PostsModule,
     AuthModule,
   ],
   controllers: [AppController],

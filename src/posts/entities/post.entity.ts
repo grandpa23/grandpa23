@@ -8,14 +8,14 @@ import {
 } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 
-@Entity({ name: 'notes' })
-export class Note {
+@Entity({ name: 'posts' })
+export class Post {
   @ApiProperty({ description: 'Id поста', nullable: false })
   @PrimaryGeneratedColumn('increment')
   id: number;
 
   @ApiProperty({ description: 'Автор поста', nullable: false })
-  @ManyToOne(() => User, (user) => user.notes)
+  @ManyToOne(() => User, (user) => user.posts)
   user?: User;
 
   @ApiProperty({ description: 'Id автора', nullable: false })

@@ -1,4 +1,4 @@
-import { Note } from '../../notes/entities/note.entity';
+import { Post } from '../../posts/entities/post.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -26,8 +26,8 @@ export class User {
   @Column('varchar')
   password: string;
 
-  @OneToMany(() => Note, (note) => note.user)
-  notes?: Note[];
+  @OneToMany(() => Post, (post) => post.user)
+  posts?: Post[];
 
   @ApiProperty({ description: 'Дата регистрации', nullable: false })
   @CreateDateColumn()
