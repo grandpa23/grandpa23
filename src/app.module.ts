@@ -15,7 +15,7 @@ import { AuthModule } from './auth/auth.module';
       type: 'postgres',
       url: "postgres://anqvznmv:eHe12msiNaTVNj0yzgaeCkKDCSBrNUKh@raja.db.elephantsql.com/anqvznmv",
       entities: [User, Post],
-      synchronize: false,
+      synchronize: true,
     }),
     UsersModule,
     PostsModule,
