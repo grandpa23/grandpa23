@@ -30,7 +30,6 @@ export class AuthService {
 
     const codedPassword = await hash(dto.password, 5);
     const newUser = await this.usersRepository.save({
-      username: dto.username,
       email: dto.email,
       password: codedPassword,
     });
