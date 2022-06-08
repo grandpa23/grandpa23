@@ -14,10 +14,6 @@ export class User {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @ApiProperty({ description: 'Логин пользователя', nullable: false })
-  @Column('varchar')
-  username: string;
-
   @ApiProperty({ description: 'Mail пользователя', nullable: false })
   @Column('varchar')
   email: string;
