@@ -11,7 +11,7 @@ import { KEY } from '../config';
   imports: [
     TypeOrmModule.forFeature([User]),
     JwtModule.register({
-      secret: 'jwtSecretKey',
+      secret: KEY,
       signOptions: { expiresIn: '24h' },
     }),
   ],

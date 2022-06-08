@@ -13,7 +13,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      url: "postgres://anqvznmv:eHe12msiNaTVNj0yzgaeCkKDCSBrNUKh@raja.db.elephantsql.com/anqvznmv",
+      url: DB_URL,
       entities: [User, Post],
       synchronize: true,
     }),
